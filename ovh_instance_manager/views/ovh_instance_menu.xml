@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_ovh_instance_root" name="OVH Instances" sequence="10"/>
+    <menuitem id="menu_ovh_instance"
+              name="Instances"
+              parent="menu_ovh_instance_root"
+              action="action_ovh_instance"/>
+</odoo>

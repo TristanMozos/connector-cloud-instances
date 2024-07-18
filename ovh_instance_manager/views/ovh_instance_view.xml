@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_ovh_instance_form" model="ir.ui.view">
+        <field name="name">ovh.instance.form</field>
+        <field name="model">ovh.instance</field>
+        <field name="arch" type="xml">
+            <form string="OVH Instance">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="client_id"/>
+                        <field name="state"/>
+                        <field name="trial_period"/>
+                        <field name="expiration_date"/>
+                    </group>
+                    <footer>
+                        <button name="create_instance" string="Create" type="object" class="btn-primary"/>
+                        <button name="start_instance" string="Start" type="object"/>
+                        <button name="stop_instance" string="Stop" type="object"/>
+                        <button name="delete_instance" string="Delete" type="object"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ovh_instance_tree" model="ir.ui.view">
+        <field name="name">ovh.instance.tree</field>
+        <field name="model">ovh.instance</field>
+        <field name="arch" type="xml">
+            <tree string="OVH Instances">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="state"/>
+                <field name="expiration_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_ovh_instance" model="ir.actions.act_window">
+        <field name="name">Instances</field>
+        <field name="res_model">ovh.instance</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
